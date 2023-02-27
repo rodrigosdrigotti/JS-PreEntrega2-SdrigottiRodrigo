@@ -73,6 +73,7 @@ function elegirOpcion() {
                 document.getElementById("resultado").innerHTML = "Retiraste: "+retiro;
                 document.getElementById("resultado2").innerHTML = "Tu Saldo actual es: "+saldo;
                 movimientos.push({fecha:diaHoy, operacion:" Retiro = " + retiro, saldo: " Saldo = " + saldo});
+
             } else {
                 alert("Fondos insuficientes ó no es valido");
             }
@@ -91,7 +92,6 @@ function elegirOpcion() {
                 document.getElementById("listaMovimientos").innerHTML += `<li> ${Object.values(values)} </li>`;  
                 
             }
-            setTimeout(limpiezaTicket, 3500);
             break;
         case 5:
             busquedaFecha = prompt("BUSQUEDA POR FECHA: \n"
@@ -115,7 +115,7 @@ function elegirOpcion() {
 }
 
 function entrarAlCajero(nombreUsuario,clave) {
-    while (usuario.nombreUsuario != usuario.nombreUsuarioLog) {
+    while (nombreUsuario != usuario.nombreUsuarioLog) {
         usuario.nombreUsuarioLog = prompt("LOGIN: \n"
                             +"------------------------- \n"
                             +"Ingrese Nombre de Usuario \n");

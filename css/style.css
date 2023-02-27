@@ -233,12 +233,14 @@ body {
 }
 .ticket {
   display: flex;
-  justify-content: center;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
   width: 95%;
-  height: 150px;
-  margin: 20px auto;
+  height: 200px;
+  margin: 10px auto;
   border-radius: 5px;
-  padding: 15px;
+  padding: 10px;
 }
 .ticket > p {
   color: white;

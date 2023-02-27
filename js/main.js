@@ -48,6 +48,12 @@ function filtarMovimientosDescripcion(){
     }
 }
 
+function limpiezaTicket(){
+    document.getElementById("resultado").innerHTML = " ";
+    document.getElementById("resultado2").innerHTML = " ";
+    document.getElementById("listaMovimientos").innerHTML = `<li></li>`;  
+}
+
 function elegirOpcion() {
     let opcion = Number(prompt("Bienvenido al Sistema!!! \u270B \n \n"
         + "Opciones \u2705 \n \n" + "1. Consulta de Saldo \n"
@@ -83,7 +89,9 @@ function elegirOpcion() {
                 document.getElementById("resultado").innerHTML = " ";
                 document.getElementById("resultado2").innerHTML = " ";
                 document.getElementById("listaMovimientos").innerHTML += `<li> ${Object.values(values)} </li>`;  
+                
             }
+            setTimeout(limpiezaTicket, 3500);
             break;
         case 5:
             busquedaFecha = prompt("BUSQUEDA POR FECHA: \n"
@@ -91,12 +99,14 @@ function elegirOpcion() {
                             +"Ingrese fecha a buscar (dd/mm) \n");
 
             filtarMovimientosFecha();
+            setTimeout(limpiezaTicket, 3500);
             break;
         case 6:
             busquedaDescripion = prompt("BUSQUEDA POR DESCRIPCION: \n"
                                 +"------------------------- \n"
                                 +"Ingrese descripcion a buscar (retiro/deposito/consulta) \n").toUpperCase();
             filtarMovimientosDescripcion();
+            setTimeout(limpiezaTicket, 3500);
             break;
         case 7:
             window.location.href = "pages/salir.html";
@@ -173,7 +183,7 @@ function registroUsuarioCajero() {
     ingresarClave(usuario.nombreUsuario);
 }
 
-//registroUsuarioCajero();
+registroUsuarioCajero();
 
 
 

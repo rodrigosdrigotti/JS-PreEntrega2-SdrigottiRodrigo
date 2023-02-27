@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css?family=Sofia+Sans+Extra+Condensed");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
+  font-family: "Sofia Sans Extra Condensed";
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.container {
+  width: 600px;
+  height: auto;
+  margin: 100px auto;
+  background-color:#4e5456;
+  padding: 100px 20px;
+  border-radius: 5px;
+}
+.containerSalir {
+  width: 700px;
+  height: 400px;
+  margin: auto;
+  background-color:#4e5456;
+  padding: 100px 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.containerSalir > h1 {
+  color: white;
+  font-size: 60px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+}
+.tituloCaja {
+  display: block;
+  background-color: #333438;
+  width: 90%;
+  height: 100px;
+  margin: auto;
+  border-radius: 5px;
+  padding: 12.5px;
+}
+.titulo {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: rgb(255, 255, 255, 0.8);
+  border-radius: 5px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.titulo > p {
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.cajaPantalla {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  background-color: #dfe6e9;
+  padding: 15px 0;
+  border-radius: 5px;
+}
+.bordePantalla{
+  width: 80%;
+  height: 300px;
+  margin: 0 auto;
+  background-color: #333438;
+  padding: 15px;
+  border-radius: 5px;
+}
+.pantalla{
+  height: 100%;
+  margin: 0 auto;
+  background-color: #0652DD;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.btn {
+  width: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.usuario {
+  height: 20px;
+  margin-bottom: 40px;
+  font-size: 30px;
+  color: white;
+}
+.opciones{
+  height: 20px;
+  margin-top: 20px;
+  font-size: 25px;
+  color: white;
+}
+.tecladoCaja {
+  display: block;
+  background-color: #333438;
+  width: 90%;
+  height: 200px;
+  margin: auto;
+  border-radius: 5px;
+  padding: 15px;
+}
+.teclado {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: rgb(255, 255, 255, 0.8);
+  border-radius: 5px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.numeros {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 5px;
+  height: 145px;
+  width: 110px;
+  padding: 2.5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.numero {
+  background-color: rgba(255, 255, 255, 0.15);
+  height: 30px;
+  width: 30px;
+  margin: 2.5px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.numero > p {
+  font-size: 20px;
+  font-weight: bold;
+}
+.botones {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 5px;
+  height: 145px;
+  width: 90px;
+  margin-left: 5px;
+  padding: 2.5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.numeroBoton {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: bolder;
+  height: 30px;
+  width: 80px;
+  margin: 2.5px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.numeroBoton:nth-child(1) {
+  background: rgb(217, 1, 1, 0.8);
+}
+.numeroBoton:nth-child(2) {
+  background: rgb(254, 233, 0, 0.8);
+}
+.numeroBoton:nth-child(3) {
+  background: rgb(3, 137, 1, 0.8);
+}
+.numeroBoton:nth-child(4) {
+  background: rgba(255, 255, 255, 0.5);
+}
+.tarjeta {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 5px;
+  height: 145px;
+  width: 100px;
+  margin-left: 50px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.tarjeta > p {
+  font-size: 13px;
+  font-weight: bolder;
+  letter-spacing: 0.5px;
+  color: black;
+  margin-bottom: 5px;
+}
+.ranuraBorde {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 5px;
+  height: 25px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.ranura {
+  background-color: rgba(4, 4, 4, 0.4);
+  height: 6px;  
+  width: 90%;
+}
+.ranuraBillete {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 5px;
+  height: 20px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ranuraBillete > .ranura {
+  background-color: rgba(4, 4, 4, 0.4);
+  height: 10px;  
+  width: 90%;
+}
+.ticket {
+  display: flex;
+  justify-content: center;
+  width: 95%;
+  height: 100px;
+  margin: 20px auto;
+  border-radius: 5px;
+  padding: 15px;
+}
+.ticket > p {
+  color: white;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  list-style: none;
+}

@@ -183,6 +183,7 @@ function registroUsuarioCajero() {
     ingresarClave(usuario.nombreUsuario);
 }
 
+
 registroUsuarioCajero();
 
 

@@ -7,6 +7,12 @@ let deposito = 0;
 let busquedaFecha;
 let busquedaDescripion;
 
+function limpiezaTicket(){
+    document.getElementById("resultado").innerHTML = " ";
+    document.getElementById("resultado2").innerHTML = " ";
+    document.getElementById("listaMovimientos").innerHTML = `<li></li>`;  
+}
+
 function mostrarMovimientos(movimientos) {
     movimientos.forEach(movimiento  => {
         document.getElementById("listaMovimientos").innerHTML += `<li> ${Object.values(movimiento)} </li>`;  
@@ -25,7 +31,7 @@ function filtrarFecha(movimiento){
 }
 
 function filtrarDescripcion(movimiento){
-    if(movimiento.descripcion.includes(busquedaDescripion)){
+    if(movimiento?.descripcion?.includes(busquedaDescripion)){
         return movimiento;
     } 
  }
@@ -48,12 +54,6 @@ function filtarMovimientosDescripcion(){
     }
 }
 
-function limpiezaTicket(){
-    document.getElementById("resultado").innerHTML = " ";
-    document.getElementById("resultado2").innerHTML = " ";
-    document.getElementById("listaMovimientos").innerHTML = `<li></li>`;  
-}
-
 function elegirOpcion() {
     let opcion = Number(prompt("Bienvenido al Sistema!!! \u270B \n \n"
         + "Opciones \u2705 \n \n" + "1. Consulta de Saldo \n"
@@ -73,7 +73,6 @@ function elegirOpcion() {
                 document.getElementById("resultado").innerHTML = "Retiraste: "+retiro;
                 document.getElementById("resultado2").innerHTML = "Tu Saldo actual es: "+saldo;
                 movimientos.push({fecha:diaHoy, operacion:" Retiro = " + retiro, saldo: " Saldo = " + saldo});
-
             } else {
                 alert("Fondos insuficientes ó no es valido");
             }
@@ -90,8 +89,8 @@ function elegirOpcion() {
                 document.getElementById("resultado").innerHTML = " ";
                 document.getElementById("resultado2").innerHTML = " ";
                 document.getElementById("listaMovimientos").innerHTML += `<li> ${Object.values(values)} </li>`;  
-                
             }
+            setTimeout(limpiezaTicket, 3500);
             break;
         case 5:
             busquedaFecha = prompt("BUSQUEDA POR FECHA: \n"
@@ -105,6 +104,7 @@ function elegirOpcion() {
             busquedaDescripion = prompt("BUSQUEDA POR DESCRIPCION: \n"
                                 +"------------------------- \n"
                                 +"Ingrese descripcion a buscar (retiro/deposito/consulta) \n").toUpperCase();
+            
             filtarMovimientosDescripcion();
             setTimeout(limpiezaTicket, 3500);
             break;
@@ -115,7 +115,7 @@ function elegirOpcion() {
 }
 
 function entrarAlCajero(nombreUsuario,clave) {
-    while (nombreUsuario != usuario.nombreUsuarioLog) {
+    while (usuario.nombreUsuario != usuario.nombreUsuarioLog) {
         usuario.nombreUsuarioLog = prompt("LOGIN: \n"
                             +"------------------------- \n"
                             +"Ingrese Nombre de Usuario \n");
@@ -182,7 +182,6 @@ function registroUsuarioCajero() {
                         +"Ingrese Nombre de Usuario \n");
     ingresarClave(usuario.nombreUsuario);
 }
-
 
 registroUsuarioCajero();
 
